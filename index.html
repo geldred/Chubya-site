@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chubya Cup Series — Masters VI · West Palm 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ─── NAV ─── -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-brand">
+        <span class="nav-logo">⛳</span>
+        <span class="nav-title">Chubya Cup</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#churyder">Churyder Cup</a></li>
+        <li><a href="#rounds">Rounds</a></li>
+        <li><a href="#history">History</a></li>
+        <li><a href="#players">Players</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">6th Annual</p>
+      <h1 class="hero-title">Chubya Cup<br><span class="hero-series">Series</span></h1>
+      <div class="hero-divider"></div>
+      <p class="hero-subtitle">Masters VI · West Palm Beach · April 2026</p>
+      <div class="hero-theme">
+        <span class="hero-manatee">🦭</span>
+        <span class="hero-theme-text">Theme Animal: The Manatee</span>
+      </div>
+      <a href="#schedule" class="hero-cta">View the Field</a>
+    </div>
+    <div class="hero-scroll">↓</div>
+  </header>
+
+  <!-- ─── SCHEDULE OVERVIEW ─── -->
+  <section id="schedule" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Masters VI · West Palm Beach</p>
+        <h2 class="section-title">Tournament Schedule</h2>
+      </div>
+
+      <div class="schedule-grid">
+        <div class="schedule-card schedule-card--active">
+          <div class="schedule-day">Thursday</div>
+          <div class="schedule-event">Churyder Cup</div>
+          <div class="schedule-course">Mayacoo Lakes</div>
+          <div class="schedule-time">2:00 PM</div>
+          <div class="schedule-badge">Round 1</div>
+        </div>
+        <div class="schedule-card">
+          <div class="schedule-day">Friday AM</div>
+          <div class="schedule-event">Cha, Cha, Cha Chubya</div>
+          <div class="schedule-course">Apogee North — Summit</div>
+          <div class="schedule-time">8:20 AM</div>
+          <div class="schedule-badge">Round 2</div>
+        </div>
+        <div class="schedule-card">
+          <div class="schedule-day">Friday PM</div>
+          <div class="schedule-event">The Masters</div>
+          <div class="schedule-course">Apogee South — Apex</div>
+          <div class="schedule-time">2:20 PM</div>
+          <div class="schedule-badge">Round 3 · Day 1</div>
+        </div>
+        <div class="schedule-card schedule-card--final">
+          <div class="schedule-day">Saturday</div>
+          <div class="schedule-event">Final Round</div>
+          <div class="schedule-course">Abacoa</div>
+          <div class="schedule-time">1:00 PM</div>
+          <div class="schedule-badge schedule-badge--gold">Green Jacket</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CHURYDER CUP ─── -->
+  <section id="churyder" class="section section-mid">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Round 1 · Thursday · Mayacoo Lakes</p>
+        <h2 class="section-title">The Churyder Cup</h2>
+        <p class="section-desc">8 Nine-Hole Matches, 1v1. At the start of each nine, groups flip a coin to determine who sets the matches. Putt-offs for tied matches at the end.</p>
+      </div>
+
+      <div class="teams-container">
+        <!-- Team Breakers -->
+        <div class="team-card team-card--breakers">
+          <div class="team-header">
+            <div class="team-wave">
+              <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,25 C15,10 25,35 40,20 C55,5 65,30 80,15 C90,5 95,15 100,10 L100,40 L0,40 Z" fill="currentColor" opacity="0.3"/>
+                <path d="M0,30 C20,15 30,35 50,25 C70,15 80,30 100,20 L100,40 L0,40 Z" fill="currentColor" opacity="0.5"/>
+              </svg>
+            </div>
+            <h3 class="team-name">The Breakers</h3>
+            <p class="team-motto">Champagne & Fairways</p>
+          </div>
+          <ul class="team-roster">
+            <li class="team-player"><span class="player-num">1</span>Ben</li>
+            <li class="team-player"><span class="player-num">2</span>Gabe</li>
+            <li class="team-player"><span class="player-num">3</span>Chair</li>
+            <li class="team-player"><span class="player-num">4</span>Chris</li>
+          </ul>
+        </div>
+
+        <div class="vs-badge">
+          <span>VS</span>
+        </div>
+
+        <!-- Team Springbreakers -->
+        <div class="team-card team-card--springbreakers">
+          <div class="team-header">
+            <div class="team-palm">
+              <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                <line x1="40" y1="75" x2="40" y2="20" stroke="currentColor" stroke-width="3" opacity="0.6"/>
+                <path d="M40,20 C30,5 10,8 5,15 C15,12 28,22 35,28" fill="currentColor" opacity="0.4"/>
+                <path d="M40,25 C55,10 70,12 72,20 C62,16 48,25 42,30" fill="currentColor" opacity="0.4"/>
+                <path d="M40,30 C28,18 15,25 12,33 C22,28 35,32 40,36" fill="currentColor" opacity="0.3"/>
+              </svg>
+            </div>
+            <h3 class="team-name">The Springbreakers</h3>
+            <p class="team-motto">Beers & Birdies</p>
+          </div>
+          <ul class="team-roster">
+            <li class="team-player"><span class="player-num">1</span>Bates</li>
+            <li class="team-player"><span class="player-num">2</span>Jim</li>
+            <li class="team-player"><span class="player-num">3</span>Pinkney</li>
+            <li class="team-player"><span class="player-num">4</span>Peter</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Matchups -->
+      <div class="matchups">
+        <h3 class="matchups-title">Front 9 Matchups</h3>
+        <div class="matchup-grid">
+          <div class="matchup">
+            <span class="matchup-player matchup-player--breakers">Ben</span>
+            <span class="matchup-sep">v.</span>
+            <span class="matchup-player matchup-player--spring">Bates</span>
+          </div>
+          <div class="matchup">
+            <span class="matchup-player matchup-player--breakers">Gabe</span>
+            <span class="matchup-sep">v.</span>
+            <span class="matchup-player matchup-player--spring">Jim</span>
+          </div>
+          <div class="matchup">
+            <span class="matchup-player matchup-player--breakers">Chair</span>
+            <span class="matchup-sep">v.</span>
+            <span class="matchup-player matchup-player--spring">Pinkney</span>
+          </div>
+          <div class="matchup">
+            <span class="matchup-player matchup-player--breakers">Chris</span>
+            <span class="matchup-sep">v.</span>
+            <span class="matchup-player matchup-player--spring">Peter</span>
+          </div>
+        </div>
+        <p class="matchups-note">Back 9 matchups determined by coin flip before turn. Putt-offs to break ties.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ROUNDS ─── -->
+  <section id="rounds" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Friday & Saturday</p>
+        <h2 class="section-title">The Masters Rounds</h2>
+      </div>
+
+      <div class="rounds-grid">
+        <!-- Round 2 -->
+        <div class="round-card">
+          <div class="round-number">Round 2</div>
+          <h3 class="round-name">Cha, Cha, Cha Chubya</h3>
+          <p class="round-meta">Friday AM · Apogee North (Summit) · 8:20 AM</p>
+          <div class="round-format">
+            <h4 class="round-format-title">Progressive Team Scoring</h4>
+            <ul class="round-rules">
+              <li><span class="rule-hole">Hole 1</span><span class="rule-desc">Best 1 net score counts</span></li>
+              <li><span class="rule-hole">Hole 2</span><span class="rule-desc">Best 2 net scores count</span></li>
+              <li><span class="rule-hole">Hole 3</span><span class="rule-desc">Best 3 net scores count</span></li>
+              <li><span class="rule-hole">Hole 4+</span><span class="rule-desc">All scores count · lowest team total wins</span></li>
+            </ul>
+          </div>
+          <div class="round-teams">
+            <div class="round-team">
+              <span class="round-team-dot round-team-dot--a"></span>
+              Bates, Jim, Peter, Andy
+            </div>
+            <div class="round-team">
+              <span class="round-team-dot round-team-dot--b"></span>
+              Ben, Chair, Gabe, Chris
+            </div>
+          </div>
+        </div>
+
+        <!-- Round 3 -->
+        <div class="round-card round-card--gold">
+          <div class="round-number round-number--gold">Round 3</div>
+          <h3 class="round-name">The Masters</h3>
+          <p class="round-meta">36 Holes · Every hole counts</p>
+          <div class="round-format">
+            <h4 class="round-format-title">Stroke Play · Net</h4>
+            <ul class="round-rules">
+              <li><span class="rule-hole">Fri PM</span><span class="rule-desc">Apogee South (Apex) · 2:20 PM</span></li>
+              <li><span class="rule-hole">Saturday</span><span class="rule-desc">Abacoa · 1:00 PM · Green Jacket</span></li>
+              <li><span class="rule-hole">Final 4</span><span class="rule-desc">Top 4 after Friday PM grouped together Saturday</span></li>
+            </ul>
+          </div>
+          <div class="round-groups">
+            <h4 class="round-format-title">Friday PM Groups</h4>
+            <div class="round-group-row">
+              <span class="group-label">Group A</span>
+              <span>Jim · Gabe · Chris · Andy</span>
+            </div>
+            <div class="round-group-row">
+              <span class="group-label">Group B</span>
+              <span>Bates · Ben · Chair · Peter</span>
+            </div>
+          </div>
+          <div class="green-jacket">
+            <span class="green-jacket-icon">🏆</span>
+            <span>Green Jacket awarded Saturday</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── HISTORY ─── -->
+  <section id="history" class="section section-mid">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Since 2021</p>
+        <h2 class="section-title">Hall of Champions</h2>
+      </div>
+
+      <div class="history-tabs">
+        <button class="history-tab history-tab--active" data-tab="masters">Masters</button>
+        <button class="history-tab" data-tab="chubya">Chubya Cup</button>
+        <button class="history-tab" data-tab="upstate">Upstate</button>
+      </div>
+
+      <div class="history-table-wrap">
+        <table class="history-table" id="history-masters">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Champion</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="history-row--latest">
+              <td>2025</td>
+              <td><span class="champ-name">Pete</span> 🏆</td>
+              <td>Alabama</td>
+            </tr>
+            <tr>
+              <td>2024</td>
+              <td><span class="champ-name">Tom</span></td>
+              <td>Palm Springs</td>
+            </tr>
+            <tr>
+              <td>2023</td>
+              <td><span class="champ-name">Liam</span></td>
+              <td>New Orleans</td>
+            </tr>
+            <tr>
+              <td>2022</td>
+              <td><span class="champ-name">Zigs</span></td>
+              <td>Orlando</td>
+            </tr>
+            <tr>
+              <td>2021</td>
+              <td><span class="champ-name">Tom</span></td>
+              <td>Rock Spring</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="history-table hidden" id="history-chubya">
+          <thead>
+            <tr><th>Year</th><th>Champion</th></tr>
+          </thead>
+          <tbody>
+            <tr class="history-row--latest">
+              <td>2025</td>
+              <td><span class="champ-name">Zigs</span> 🏆</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="history-table hidden" id="history-upstate">
+          <thead>
+            <tr><th>Year</th><th>Champion</th></tr>
+          </thead>
+          <tbody>
+            <tr class="history-row--latest">
+              <td>2025</td>
+              <td><span class="champ-name">Ben</span> 🏆</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="history-stats">
+        <div class="stat-card">
+          <div class="stat-number">6</div>
+          <div class="stat-label">Years Running</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">2</div>
+          <div class="stat-label">Tom's Titles</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">4</div>
+          <div class="stat-label">Rounds This Week</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">9</div>
+          <div class="stat-label">Players in the Field</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PLAYERS ─── -->
+  <section id="players" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Masters VI · 2026</p>
+        <h2 class="section-title">The Field</h2>
+      </div>
+
+      <div class="players-grid">
+        <div class="player-card">
+          <div class="player-avatar player-avatar--b">B</div>
+          <div class="player-name">Ben</div>
+          <div class="player-team team-tag--breakers">The Breakers</div>
+        </div>
+        <div class="player-card">
+          <div class="player-avatar player-avatar--g">G</div>
+          <div class="player-name">Gabe</div>
+          <div class="player-team team-tag--breakers">The Breakers</div>
+        </div>
+        <div class="player-card">
+          <div class="player-avatar player-avatar--c">C</div>
+          <div class="player-name">Chair</div>
+          <div class="player-team team-tag--breakers">The Breakers</div>
+        </div>
+        <div class="player-card">
+          <div class="player-avatar player-avatar--ch">C</div>
+          <div class="player-name">Chris</div>
+          <div class="player-team team-tag--breakers">The Breakers</div>
+        </div>
+        <div class="player-card">
+          <div class="player-avatar player-avatar--ba">B</div>
+          <div class="player-name">Bates</div>
+          <div class="player-team team-tag--spring">The Springbreakers</div>
+        </div>
+        <div class="player-card">
+          <div class="player-avatar player-avatar--j">J</div>
+          <div class="player-name">Jim</div>
+          <div class="player-team team-tag--spring">The Springbreakers</div>
+        </div>
+        <div class="player-card">
+          <div class="player-avatar player-avatar--pi">P</div>
+          <div class="player-name">Pinkney</div>
+          <div class="player-team team-tag--spring">The Springbreakers</div>
+        </div>
+        <div class="player-card">
+          <div class="player-avatar player-avatar--pe">P</div>
+          <div class="player-name">Peter</div>
+          <div class="player-team team-tag--spring">The Springbreakers</div>
+        </div>
+        <div class="player-card player-card--solo">
+          <div class="player-avatar player-avatar--a">A</div>
+          <div class="player-name">Andy</div>
+          <div class="player-team team-tag--solo">Masters Only</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="footer-logo">⛳</span>
+          <div>
+            <div class="footer-title">Chubya Cup Series</div>
+            <div class="footer-sub">Masters VI · West Palm Beach · 2026</div>
+          </div>
+        </div>
+        <div class="footer-quote">
+          "Play hard, drink responsibly,<br>and may history be made."
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Chubya Cup Series · Theme Animal: The Manatee 🦭</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
