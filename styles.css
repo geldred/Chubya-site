@@ -773,6 +773,209 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   color: var(--gold-400);
 }
 
+/* ─── WELCOME ─────────────────────────────────────────── */
+.welcome-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+.welcome-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, var(--gold-500), var(--gold-700));
+  color: var(--green-900);
+  padding: 5px 16px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+.welcome-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 28px;
+  line-height: 1.15;
+}
+.welcome-quote {
+  font-family: var(--font-display);
+  font-size: clamp(17px, 2.5vw, 22px);
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  border-left: 3px solid var(--gold-500);
+  padding-left: 24px;
+  text-align: left;
+  margin-bottom: 28px;
+}
+.welcome-divider {
+  width: 60px;
+  height: 1px;
+  background: rgba(200, 169, 81, 0.35);
+  margin: 0 auto 28px;
+}
+.welcome-body {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 16px;
+  text-align: left;
+}
+.welcome-body strong { color: var(--text-primary); font-weight: 600; }
+.welcome-body--cta {
+  text-align: center;
+  font-size: 17px;
+  color: var(--gold-300);
+  margin-top: 8px;
+  margin-bottom: 40px;
+}
+.welcome-stats-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: rgba(0,0,0,0.2);
+  border: 1px solid rgba(200, 169, 81, 0.15);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.welcome-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 16px;
+  gap: 4px;
+}
+.welcome-stat-val {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gold-400);
+}
+.welcome-stat-lbl {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.welcome-stat-div {
+  width: 1px;
+  height: 48px;
+  background: rgba(200, 169, 81, 0.15);
+  flex-shrink: 0;
+}
+
+/* ─── HISTORY ADDITIONS ───────────────────────────────── */
+.history-row--tbd td {
+  background: rgba(200, 169, 81, 0.04);
+  border-bottom: 1px dashed rgba(200, 169, 81, 0.15);
+}
+.champ-tbd {
+  color: var(--gold-700) !important;
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+.champ-aka {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+/* ─── WALL OF VICTORY ─────────────────────────────────── */
+.victory-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(200, 169, 81, 0.2);
+}
+.victory-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  min-width: 560px;
+}
+.victory-table thead tr {
+  background: rgba(200, 169, 81, 0.08);
+  border-bottom: 1px solid rgba(200, 169, 81, 0.25);
+}
+.victory-table th {
+  padding: 14px 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-500);
+  text-align: left;
+}
+.th-rank { width: 48px; text-align: center; }
+.th-num { text-align: center; }
+.victory-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  vertical-align: middle;
+}
+.victory-table tr:last-child td { border-bottom: none; }
+.victory-table tbody tr {
+  transition: background 0.15s;
+}
+.victory-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+.victory-row--elite td {
+  background: rgba(200, 169, 81, 0.04);
+}
+.victory-row--elite:hover td {
+  background: rgba(200, 169, 81, 0.08) !important;
+}
+.td-rank {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+.td-num {
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.td-champ {
+  color: var(--gold-400);
+  font-family: var(--font-display);
+  font-size: 18px;
+}
+.v-name {
+  font-weight: 700;
+  color: var(--text-primary);
+  display: block;
+  font-size: 16px;
+}
+.v-aka {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+  display: block;
+}
+.v-note {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--text-muted);
+  display: block;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.victory-footnote {
+  padding: 14px 20px;
+  font-size: 12px;
+  font-style: italic;
+  color: var(--text-muted);
+  border-top: 1px solid rgba(200, 169, 81, 0.12);
+  background: rgba(0,0,0,0.1);
+}
+
 /* ─── FOOTER ──────────────────────────────────────────── */
 .footer {
   background: var(--green-900);
@@ -863,4 +1066,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .players-grid { grid-template-columns: repeat(2, 1fr); }
   .schedule-grid { grid-template-columns: 1fr; }
   .matchup-grid { grid-template-columns: 1fr; }
+  .welcome-stats-row { flex-direction: column; }
+  .welcome-stat-div { width: 80%; height: 1px; }
+  .welcome-quote { padding-left: 16px; font-size: 16px; }
 }
