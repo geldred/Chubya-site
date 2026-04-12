@@ -360,6 +360,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   position: relative;
   padding: 36px 32px 24px;
   overflow: hidden;
+  text-align: center;
 }
 .team-wave {
   position: absolute;
@@ -401,6 +402,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .team-player {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 14px;
   padding: 12px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
