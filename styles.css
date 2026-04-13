@@ -198,7 +198,33 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-size: 14px;
   color: var(--gold-300);
 }
-.hero-manatee { font-size: 18px; }
+/* ─── MANATEE LOGO ────────────────────────────────────── */
+.hero-crest {
+  margin-bottom: 20px;
+}
+.hero-crest-img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin: 0 auto;
+  filter: drop-shadow(0 4px 24px rgba(200, 169, 81, 0.35));
+}
+.hero-manatee-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+.nav-manatee {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+.footer-manatee {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
 .hero-cta {
   display: inline-block;
   background: linear-gradient(135deg, var(--gold-500), var(--gold-700));
@@ -233,7 +259,24 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 /* ─── SECTIONS ────────────────────────────────────────── */
 .section { padding: 96px 0; }
 .section-dark { background: var(--green-800); }
-.section-mid { background: var(--green-700); }
+.section-mid {
+  background: var(--green-700);
+  position: relative;
+}
+.section-mid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(200, 169, 81, 0.015) 80px, rgba(200, 169, 81, 0.015) 81px),
+    repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(200, 169, 81, 0.015) 80px, rgba(200, 169, 81, 0.015) 81px);
+  pointer-events: none;
+  z-index: 0;
+}
+.section-mid > .container {
+  position: relative;
+  z-index: 1;
+}
 
 .section-header {
   text-align: center;
@@ -251,9 +294,20 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-family: var(--font-display);
   font-size: clamp(32px, 5vw, 52px);
   font-weight: 700;
-  color: var(--text-primary);
   line-height: 1.1;
   margin-bottom: 16px;
+  background: linear-gradient(135deg, var(--gold-100), var(--gold-300), var(--gold-400));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.section-eyebrow::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--gold-500);
+  margin: 0 auto 12px;
 }
 .section-desc {
   font-size: 16px;
@@ -283,6 +337,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .schedule-card--active {
   border-color: rgba(200, 169, 81, 0.5);
+  border-top: 2px solid var(--gold-500);
   background: rgba(200, 169, 81, 0.06);
   box-shadow: var(--shadow-gold);
 }
@@ -344,7 +399,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   flex: 1;
   border-radius: var(--radius-xl);
   overflow: hidden;
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-card), var(--shadow-inset);
 }
 .team-card--breakers {
   background: linear-gradient(160deg, var(--navy-700) 0%, var(--navy-900) 100%);
@@ -358,9 +413,40 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .team-header {
   position: relative;
-  padding: 36px 32px 24px;
+  padding: 60px 32px 28px;
+  min-height: 200px;
   overflow: hidden;
   text-align: center;
+}
+
+/* ─── TEAM PHOTOS ─────────────────────────────────────── */
+.team-photo {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 25%;
+  z-index: 0;
+}
+.team-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+.team-card--breakers .team-photo::after {
+  background: linear-gradient(
+    180deg,
+    rgba(15, 37, 64, 0.25) 0%,
+    rgba(7, 17, 32, 0.7) 55%,
+    rgba(7, 17, 32, 0.92) 100%
+  );
+}
+.team-card--springbreakers .team-photo::after {
+  background: linear-gradient(
+    180deg,
+    rgba(15, 48, 32, 0.25) 0%,
+    rgba(7, 26, 16, 0.7) 55%,
+    rgba(7, 26, 16, 0.92) 100%
+  );
 }
 .team-wave {
   position: absolute;
@@ -454,7 +540,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-size: 16px;
   font-weight: 900;
   color: var(--green-900);
-  box-shadow: 0 4px 20px rgba(200, 169, 81, 0.5), 0 0 0 4px var(--green-700);
+  box-shadow:
+    0 4px 20px rgba(200, 169, 81, 0.5),
+    0 0 0 3px var(--green-700),
+    0 0 0 5px rgba(200, 169, 81, 0.4);
 }
 
 /* ─── MATCHUPS ────────────────────────────────────────── */
@@ -519,6 +608,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .round-card--gold {
   border-color: rgba(200, 169, 81, 0.4);
+  border-top: 2px solid var(--gold-500);
   background: rgba(200, 169, 81, 0.05);
   box-shadow: var(--shadow-gold);
 }
@@ -671,6 +761,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .history-table tr:last-child td { border-bottom: none; }
 .history-row--latest td {
   background: rgba(200, 169, 81, 0.06);
+}
+.history-row--latest td:first-child {
+  border-left: 3px solid var(--gold-500);
 }
 .champ-name {
   font-weight: 700;
@@ -1049,9 +1142,12 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .teams-container {
     flex-direction: column;
   }
+  .teams-container { margin-bottom: 72px; }
   .team-card--breakers { border-radius: var(--radius-xl) var(--radius-xl) 0 0; }
   .team-card--springbreakers { border-radius: 0 0 var(--radius-xl) var(--radius-xl); }
-  .vs-badge { top: auto; bottom: -30px; left: 50%; }
+  .team-player { width: 180px; }
+  .hero-crest-img { width: 90px; height: 90px; }
+  .team-header { min-height: 160px; }
 
   .rounds-grid { grid-template-columns: 1fr; }
 
