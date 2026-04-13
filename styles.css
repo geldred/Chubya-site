@@ -597,20 +597,16 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .rules-principle {
   display: grid;
-  gap: 10px;
-  padding: 20px 20px 6px;
-}
-.rules-kicker {
-  display: inline-block;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold-500);
+  gap: 16px;
+  padding: 18px 20px;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(200, 169, 81, 0.12);
+  background: linear-gradient(180deg, rgba(19, 44, 30, 0.96) 0%, rgba(12, 31, 20, 0.98) 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 .rules-principle-text {
   max-width: 72ch;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.7;
   color: var(--text-secondary);
 }
@@ -675,15 +671,27 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   align-items: start;
 }
 .rules-list {
-  padding-left: 20px;
+  list-style: none;
+  padding-left: 0;
   display: grid;
-  gap: 8px;
+  gap: 10px;
   color: var(--text-secondary);
   line-height: 1.6;
   font-size: 15px;
 }
-.rules-list li::marker {
-  color: var(--gold-400);
+.rules-list li {
+  position: relative;
+  padding-left: 16px;
+}
+.rules-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold-400);
 }
 .rules-note {
   margin-top: 12px;
@@ -706,6 +714,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .rules-note strong,
 .rules-spirit-callout strong {
   color: var(--text-primary);
+}
+.rules-list sup {
+  font-size: 0.62em;
+  vertical-align: super;
+  letter-spacing: 0.04em;
 }
 
 /* ─── TEAMS ───────────────────────────────────────────── */
@@ -1588,15 +1601,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   letter-spacing: 0;
   text-transform: none;
 }
-.victory-footnote {
-  padding: 14px 20px;
-  font-size: 12px;
-  font-style: italic;
-  color: var(--text-muted);
-  border-top: 1px solid rgba(200, 169, 81, 0.12);
-  background: rgba(0,0,0,0.1);
-}
-
 /* ─── FOOTER ──────────────────────────────────────────── */
 .footer {
   background: var(--green-900);
