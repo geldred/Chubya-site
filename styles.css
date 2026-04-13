@@ -1427,6 +1427,17 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   color: var(--text-primary);
   font-weight: 600;
 }
+.decree-acclaim {
+  display: block;
+  margin-top: 10px;
+  font-family: var(--font-ceremonial);
+  font-size: clamp(24px, 3.2vw, 32px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  color: var(--gold-300);
+  text-wrap: balance;
+}
 
 /* ─── 2025 Honors ─── */
 .w-honors {
