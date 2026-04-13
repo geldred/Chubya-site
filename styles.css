@@ -28,6 +28,7 @@
   --text-secondary: #c8bfa8;
   --text-muted: #8a7f6a;
 
+  --font-accent: 'Cinzel', 'Times New Roman', serif;
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'Inter', system-ui, sans-serif;
 
@@ -72,16 +73,17 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(8, 21, 16, 0.92);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(200, 169, 81, 0.2);
-  transition: background 0.3s;
+  background: linear-gradient(180deg, rgba(6, 17, 12, 0.72) 0%, rgba(6, 17, 12, 0.5) 100%);
+  backdrop-filter: blur(18px) saturate(125%);
+  border-bottom: 1px solid rgba(200, 169, 81, 0.14);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.16);
+  transition: background 0.3s, border-color 0.3s;
 }
 .nav-inner {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 24px;
-  height: 64px;
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -89,34 +91,39 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .nav-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
 }
 .nav-logo { font-size: 20px; }
 .nav-title {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 18px;
-  color: var(--gold-400);
-  letter-spacing: 0.02em;
+  font-family: var(--font-accent);
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--gold-300);
+  letter-spacing: 0.01em;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.22);
 }
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 26px;
 }
 .nav-links a {
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
+  font-family: var(--font-accent);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--text-secondary);
-  transition: color 0.2s;
+  color: rgba(248, 240, 216, 0.8);
+  transition: color 0.2s, opacity 0.2s;
 }
-.nav-links a:hover { color: var(--gold-400); }
+.nav-links a:hover {
+  color: var(--gold-300);
+  opacity: 1;
+}
 .nav-toggle {
   display: none;
-  font-size: 22px;
-  color: var(--gold-400);
+  font-size: 28px;
+  color: var(--gold-300);
   padding: 4px 8px;
 }
 
@@ -1046,7 +1053,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 /* ─── WELCOME ─────────────────────────────────────────── */
 .welcome-inner {
-  max-width: 760px;
+  max-width: 1080px;
   margin: 0 auto;
   text-align: center;
 }
@@ -1060,57 +1067,109 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   color: var(--green-900);
   padding: 5px 16px;
   border-radius: 100px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 .welcome-title {
   font-family: var(--font-display);
-  font-size: clamp(28px, 5vw, 44px);
+  font-size: clamp(34px, 5vw, 56px);
   font-weight: 700;
   color: var(--text-primary);
+  margin-bottom: 14px;
+  line-height: 1.05;
+}
+.welcome-intro {
+  max-width: 620px;
+  margin: 0 auto 36px;
+  color: var(--text-muted);
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.welcome-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.9fr);
+  gap: 28px;
+  align-items: stretch;
   margin-bottom: 28px;
-  line-height: 1.15;
+}
+.welcome-manifesto,
+.welcome-card {
+  position: relative;
+  overflow: hidden;
+  padding: 30px 30px 32px;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(200, 169, 81, 0.18);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.015) 100%),
+    rgba(0, 0, 0, 0.14);
+  box-shadow: var(--shadow-card);
+  text-align: left;
+}
+.welcome-manifesto::before,
+.welcome-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 1px;
+  background: linear-gradient(180deg, rgba(200, 169, 81, 0) 0%, rgba(200, 169, 81, 0.45) 22%, rgba(200, 169, 81, 0.1) 100%);
+}
+.welcome-proclamations {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.welcome-label {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--gold-500);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 .welcome-quote {
   font-family: var(--font-display);
-  font-size: clamp(17px, 2.5vw, 22px);
+  font-size: clamp(24px, 3vw, 32px);
   font-style: italic;
-  color: var(--text-secondary);
-  line-height: 1.65;
-  border-left: 3px solid var(--gold-500);
-  padding-left: 24px;
-  text-align: left;
-  margin-bottom: 28px;
+  color: var(--gold-100);
+  line-height: 1.45;
+  text-wrap: balance;
+  margin-bottom: 26px;
 }
 .welcome-divider {
-  width: 60px;
-  height: 1px;
-  background: rgba(200, 169, 81, 0.35);
-  margin: 0 auto 28px;
+  width: 92px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(200, 169, 81, 0.08), rgba(200, 169, 81, 0.65), rgba(200, 169, 81, 0.08));
+  margin: 0;
 }
 .welcome-body {
-  font-size: 16px;
+  font-size: 17px;
   color: var(--text-secondary);
-  line-height: 1.75;
-  margin-bottom: 16px;
+  line-height: 1.8;
+  margin-bottom: 0;
   text-align: left;
 }
 .welcome-body strong { color: var(--text-primary); font-weight: 600; }
 .welcome-body--cta {
   text-align: center;
-  font-size: 17px;
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 30px);
   color: var(--gold-300);
-  margin-top: 8px;
+  max-width: 720px;
+  margin: 0 auto 40px;
   margin-bottom: 40px;
+  line-height: 1.4;
 }
 .welcome-stats-row {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.22);
   border: 1px solid rgba(200, 169, 81, 0.15);
   border-radius: var(--radius-lg);
   overflow: hidden;
+  box-shadow: var(--shadow-card);
 }
 .welcome-stat {
   flex: 1;
@@ -1303,9 +1362,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 64px;
+    top: 72px;
     left: 0; right: 0;
-    background: var(--green-900);
+    background: rgba(7, 20, 15, 0.92);
     border-bottom: 1px solid rgba(200, 169, 81, 0.2);
     padding: 24px;
     gap: 24px;
@@ -1357,6 +1416,14 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .footer-quote { text-align: left; }
 
   .schedule-grid { grid-template-columns: 1fr 1fr; }
+
+  .welcome-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .welcome-intro {
+    margin-bottom: 28px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1387,5 +1454,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .matchup-grid { grid-template-columns: 1fr; }
   .welcome-stats-row { flex-direction: column; }
   .welcome-stat-div { width: 80%; height: 1px; }
-  .welcome-quote { padding-left: 16px; font-size: 16px; }
+  .welcome-manifesto,
+  .welcome-card {
+    padding: 24px 22px 26px;
+  }
+  .welcome-quote {
+    font-size: 22px;
+  }
 }
