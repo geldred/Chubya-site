@@ -66,7 +66,7 @@ sections.forEach(s => observer.observe(s));
 
 // ─── ENTRY ANIMATIONS ─────────────────────────────────────
 const fadeEls = document.querySelectorAll(
-  '.schedule-card, .team-card, .round-card, .player-card, .stat-card, .matchup'
+  '.schedule-card, .rules-card, .rules-poster, .team-card, .round-card, .player-card, .stat-card, .matchup'
 );
 
 const fadeObserver = new IntersectionObserver(entries => {
