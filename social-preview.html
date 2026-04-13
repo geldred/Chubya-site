@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chubya Cup Social Preview</title>
+  <style>
+    :root {
+      --green-900: #07140f;
+      --green-800: #0d2017;
+      --green-700: #143123;
+      --gold-500: #c8a951;
+      --gold-300: #e8cf90;
+      --gold-100: #f8f0d8;
+      --text-primary: #f7f0e5;
+      --text-secondary: #d9cfb5;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      font-family: Georgia, serif;
+      background: var(--green-900);
+      color: var(--text-primary);
+    }
+
+    .frame {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(5, 14, 10, 0.92) 0%, rgba(5, 14, 10, 0.76) 33%, rgba(5, 14, 10, 0.24) 67%, rgba(5, 14, 10, 0.72) 100%),
+        linear-gradient(180deg, rgba(5, 14, 10, 0.2) 0%, rgba(5, 14, 10, 0.82) 100%),
+        url('images/apogee north.jpeg') center center / cover no-repeat;
+    }
+
+    .frame::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 56px, rgba(200, 169, 81, 0.05) 56px, rgba(200, 169, 81, 0.05) 57px),
+        repeating-linear-gradient(90deg, transparent, transparent 56px, rgba(200, 169, 81, 0.05) 56px, rgba(200, 169, 81, 0.05) 57px);
+    }
+
+    .sunwash {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 84% 15%, rgba(247, 214, 133, 0.34) 0%, transparent 28%),
+        radial-gradient(circle at 48% 42%, rgba(98, 148, 84, 0.18) 0%, transparent 30%);
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      width: 100%;
+      height: 100%;
+      padding: 68px 76px 72px;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(232, 207, 144, 0.3);
+      background: rgba(7, 20, 15, 0.46);
+      color: var(--gold-300);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      backdrop-filter: blur(10px);
+    }
+
+    .mark {
+      width: 68px;
+      height: 68px;
+      margin-bottom: 18px;
+      object-fit: contain;
+      filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.3));
+    }
+
+    .eyebrow {
+      margin-bottom: 14px;
+      color: var(--gold-500);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 650px;
+      margin-bottom: 18px;
+      font-size: 86px;
+      line-height: 0.92;
+      letter-spacing: -0.04em;
+      text-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+    }
+
+    h1 span {
+      display: block;
+      color: var(--gold-500);
+      font-style: italic;
+    }
+
+    .divider {
+      width: 88px;
+      height: 2px;
+      margin-bottom: 26px;
+      background: linear-gradient(90deg, transparent, var(--gold-500), transparent);
+    }
+
+    .subtitle {
+      max-width: 680px;
+      color: var(--text-secondary);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 28px;
+      line-height: 1.35;
+      text-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+    }
+
+    .corner {
+      position: absolute;
+      top: 40px;
+      right: 48px;
+      color: rgba(248, 240, 216, 0.72);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="sunwash"></div>
+    <div class="corner">chubyacup.com</div>
+    <div class="content">
+      <div class="kicker">Masters VI • West Palm Beach • 2026</div>
+      <img class="mark" src="images/manatee-logo.png" alt="Chubya Cup mark" />
+      <div class="eyebrow">6th Annual</div>
+      <h1>Chubya Cup <span>Series</span></h1>
+      <div class="divider"></div>
+      <div class="subtitle">Four rounds. Three courses. One green jacket.</div>
+    </div>
+  </div>
+</body>
+</html>
