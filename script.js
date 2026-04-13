@@ -11,6 +11,26 @@ navLinks?.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => navLinks.classList.remove('nav-open'));
 });
 
+// ─── SCHEDULE CARD NAVIGATION ───────────────────────────
+document.querySelectorAll('.schedule-card[data-target]').forEach(card => {
+  const navigate = () => {
+    const target = document.querySelector(card.dataset.target);
+    target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  card.addEventListener('click', event => {
+    if (event.target.closest('a')) return;
+    navigate();
+  });
+
+  card.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      navigate();
+    }
+  });
+});
+
 // ─── HISTORY TABS ─────────────────────────────────────────
 document.querySelectorAll('.history-tab').forEach(tab => {
   tab.addEventListener('click', () => {

@@ -101,37 +101,49 @@
       </div>
 
       <div class="schedule-grid">
-        <div class="schedule-card schedule-card--active">
-          <div class="schedule-day">Thursday</div>
-          <div class="schedule-event">Churyder Cup</div>
-          <div class="schedule-course">Mayacoo Lakes</div>
-          <a class="course-link course-link--inline" href="https://www.google.com/maps/dir/?api=1&destination=9697+Mayacoo+Club+Dr,+West+Palm+Beach,+FL+33411" target="_blank" rel="noopener noreferrer">Directions</a>
-          <div class="schedule-time">2:00 PM</div>
-          <div class="schedule-badge">Round 1</div>
+        <div class="schedule-card schedule-card--active" data-target="#churyder" tabindex="0" role="link" aria-label="Open Round 1 section">
+          <div class="schedule-card-media" style="background-image: url('images/mayacoo.jpg')"></div>
+          <div class="schedule-card-content">
+            <div class="schedule-day">Thursday</div>
+            <div class="schedule-event">Churyder Cup</div>
+            <div class="schedule-course">Mayacoo Lakes</div>
+            <a class="course-link course-link--inline" href="https://www.google.com/maps/dir/?api=1&destination=9697+Mayacoo+Club+Dr,+West+Palm+Beach,+FL+33411" target="_blank" rel="noopener noreferrer">Directions</a>
+            <div class="schedule-time">2:00 PM</div>
+            <div class="schedule-badge">Round 1</div>
+          </div>
         </div>
-        <div class="schedule-card">
-          <div class="schedule-day">Friday AM</div>
-          <div class="schedule-event">Cha, Cha, Cha Chubya</div>
-          <div class="schedule-course">Apogee North — Summit</div>
-          <a class="course-link course-link--inline" href="https://www.google.com/maps/dir/?api=1&destination=2103+SW+Bridge+Rd,+Hobe+Sound,+FL+33455" target="_blank" rel="noopener noreferrer">Directions</a>
-          <div class="schedule-time">8:20 AM</div>
-          <div class="schedule-badge">Round 2</div>
+        <div class="schedule-card" data-target="#round-2" tabindex="0" role="link" aria-label="Open Round 2 section">
+          <div class="schedule-card-media" style="background-image: url('images/apogee north.jpeg')"></div>
+          <div class="schedule-card-content">
+            <div class="schedule-day">Friday AM</div>
+            <div class="schedule-event">Cha, Cha, Cha Chubya</div>
+            <div class="schedule-course">Apogee North — Summit</div>
+            <a class="course-link course-link--inline" href="https://www.google.com/maps/dir/?api=1&destination=2103+SW+Bridge+Rd,+Hobe+Sound,+FL+33455" target="_blank" rel="noopener noreferrer">Directions</a>
+            <div class="schedule-time">8:20 AM</div>
+            <div class="schedule-badge">Round 2</div>
+          </div>
         </div>
-        <div class="schedule-card">
-          <div class="schedule-day">Friday PM</div>
-          <div class="schedule-event">The Masters</div>
-          <div class="schedule-course">Apogee South — Apex</div>
-          <a class="course-link course-link--inline" href="https://www.google.com/maps/dir/?api=1&destination=2103+SW+Bridge+Rd,+Hobe+Sound,+FL+33455" target="_blank" rel="noopener noreferrer">Directions</a>
-          <div class="schedule-time">2:20 PM</div>
-          <div class="schedule-badge">Round 3 · Day 1</div>
+        <div class="schedule-card" data-target="#round-3" tabindex="0" role="link" aria-label="Open Round 3 section">
+          <div class="schedule-card-media" style="background-image: url('images/apogee south.jpg')"></div>
+          <div class="schedule-card-content">
+            <div class="schedule-day">Friday PM</div>
+            <div class="schedule-event">The Masters</div>
+            <div class="schedule-course">Apogee South — Apex</div>
+            <a class="course-link course-link--inline" href="https://www.google.com/maps/dir/?api=1&destination=2103+SW+Bridge+Rd,+Hobe+Sound,+FL+33455" target="_blank" rel="noopener noreferrer">Directions</a>
+            <div class="schedule-time">2:20 PM</div>
+            <div class="schedule-badge">Round 3 · Day 1</div>
+          </div>
         </div>
-        <div class="schedule-card schedule-card--final">
-          <div class="schedule-day">Saturday</div>
-          <div class="schedule-event">Final Round</div>
-          <div class="schedule-course">Abacoa</div>
-          <a class="course-link course-link--inline" href="https://www.google.com/maps/dir/?api=1&destination=105+Barbados+Dr,+Jupiter,+FL+33458" target="_blank" rel="noopener noreferrer">Directions</a>
-          <div class="schedule-time">1:00 PM</div>
-          <div class="schedule-badge schedule-badge--gold">Green Jacket</div>
+        <div class="schedule-card schedule-card--final" data-target="#round-final" tabindex="0" role="link" aria-label="Open Final Round section">
+          <div class="schedule-card-media" style="background-image: url('images/abacoa.avif')"></div>
+          <div class="schedule-card-content">
+            <div class="schedule-day">Saturday</div>
+            <div class="schedule-event">Final Round</div>
+            <div class="schedule-course">Abacoa</div>
+            <a class="course-link course-link--inline" href="https://www.google.com/maps/dir/?api=1&destination=105+Barbados+Dr,+Jupiter,+FL+33458" target="_blank" rel="noopener noreferrer">Directions</a>
+            <div class="schedule-time">1:00 PM</div>
+            <div class="schedule-badge schedule-badge--gold">Green Jacket</div>
+          </div>
         </div>
       </div>
     </div>
@@ -246,7 +258,7 @@
 
       <div class="rounds-grid">
         <!-- Round 2 -->
-        <div class="round-card">
+        <div class="round-card" id="round-2">
           <div class="course-spotlight">
             <div class="course-spotlight-media" style="background-image: url('images/apogee north.jpeg')"></div>
             <div class="course-spotlight-copy">
@@ -281,7 +293,7 @@
         </div>
 
         <!-- Round 3 -->
-        <div class="round-card round-card--gold">
+        <div class="round-card round-card--gold" id="round-3">
           <div class="course-gallery">
             <div class="course-spotlight course-spotlight--compact">
               <div class="course-spotlight-media" style="background-image: url('images/apogee south.jpg')"></div>
@@ -292,7 +304,7 @@
                 <a class="course-link" href="https://www.google.com/maps/dir/?api=1&destination=2103+SW+Bridge+Rd,+Hobe+Sound,+FL+33455" target="_blank" rel="noopener noreferrer">Directions</a>
               </div>
             </div>
-            <div class="course-spotlight course-spotlight--compact course-spotlight--finale">
+            <div class="course-spotlight course-spotlight--compact course-spotlight--finale" id="round-final">
               <div class="course-spotlight-media" style="background-image: url('images/abacoa.avif')"></div>
               <div class="course-spotlight-copy">
                 <span class="course-spotlight-label">Saturday Finale</span>

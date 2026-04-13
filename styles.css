@@ -364,23 +364,50 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(200, 169, 81, 0.15);
   border-radius: var(--radius-lg);
-  padding: 28px 24px;
   position: relative;
-  transition: border-color 0.2s, transform 0.2s;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
-.schedule-card:hover {
+.schedule-card:hover,
+.schedule-card:focus-visible {
   border-color: rgba(200, 169, 81, 0.4);
   transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+  outline: none;
 }
 .schedule-card--active {
   border-color: rgba(200, 169, 81, 0.5);
-  border-top: 2px solid var(--gold-500);
   background: rgba(200, 169, 81, 0.06);
   box-shadow: var(--shadow-gold);
 }
 .schedule-card--final {
   border-color: rgba(200, 169, 81, 0.35);
   background: rgba(200, 169, 81, 0.05);
+}
+.schedule-card-media {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 112px;
+  background-size: cover;
+  background-position: center center;
+}
+.schedule-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(7, 17, 32, 0.22) 0%, rgba(7, 17, 32, 0.58) 110px, rgba(7, 17, 32, 0) 110px),
+    linear-gradient(180deg, rgba(7, 17, 32, 0) 0%, rgba(7, 17, 32, 0.92) 100%);
+  pointer-events: none;
+}
+.schedule-card-content {
+  position: relative;
+  z-index: 1;
+  padding: 132px 24px 28px;
+  min-height: 292px;
+  display: flex;
+  flex-direction: column;
 }
 .schedule-day {
   font-size: 11px;
@@ -432,7 +459,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .schedule-time {
   font-size: 13px;
   color: var(--text-muted);
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 .schedule-badge {
   display: inline-block;
@@ -444,6 +471,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   color: var(--gold-400);
   padding: 4px 12px;
   border-radius: 100px;
+  margin-top: auto;
 }
 .schedule-badge--gold {
   background: var(--gold-500);
