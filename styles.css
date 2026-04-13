@@ -1580,6 +1580,16 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .th-rank { width: 48px; text-align: center; }
 .th-num { text-align: center; }
+.table-head-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.table-head-icon {
+  line-height: 1;
+}
 .victory-table td {
   padding: 16px 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
