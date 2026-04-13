@@ -166,31 +166,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   flex-direction: column;
   align-items: flex-start;
 }
-.hero-venue {
-  display: inline-flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 12px 16px;
-  margin-bottom: 28px;
-  border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(8, 21, 16, 0.38);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22);
-}
-.hero-venue-label {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold-500);
-}
-.hero-venue-name {
-  font-family: var(--font-display);
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--text-primary);
-}
 .hero-eyebrow {
   font-size: 13px;
   font-weight: 600;
@@ -1324,9 +1299,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     align-items: center;
     padding: 112px 24px 72px;
   }
-  .hero-venue {
-    align-items: center;
-  }
   .hero-crest-img { width: 92px; height: 92px; margin: 0 auto; }
   .hero-divider { margin-left: auto; margin-right: auto; }
   .hero-subtitle { max-width: 560px; }
@@ -1366,9 +1338,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   }
   .hero-title {
     font-size: clamp(48px, 18vw, 72px);
-  }
-  .hero-venue {
-    width: 100%;
   }
   .hero-actions {
     flex-direction: column;
