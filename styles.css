@@ -134,8 +134,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   height: 24px;
   display: block;
   background-color: currentColor;
-  -webkit-mask-image: url('images/golf-cart.svg');
-  mask-image: url('images/golf-cart.svg');
+  -webkit-mask-image: url('images/golf-cart.svg?v=2026-04-13-cart-asset');
+  mask-image: url('images/golf-cart.svg?v=2026-04-13-cart-asset');
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
