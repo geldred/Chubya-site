@@ -551,6 +551,13 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   min-width: 164px;
   background: rgba(7, 17, 32, 0.58);
 }
+.rules-actions--bottom {
+  margin-top: 24px;
+  justify-content: flex-start;
+}
+.rules-actions--bottom .rules-actions-label {
+  text-align: left;
+}
 .rule-item {
   border-radius: var(--radius-xl);
   border: 1px solid rgba(200, 169, 81, 0.12);
