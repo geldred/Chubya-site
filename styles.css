@@ -430,8 +430,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .team-header {
   position: relative;
-  padding: 60px 32px 28px;
-  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 88px 32px 28px;
+  min-height: 240px;
   overflow: hidden;
   text-align: center;
 }
@@ -452,17 +455,19 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .team-card--breakers .team-photo::after {
   background: linear-gradient(
     180deg,
-    rgba(15, 37, 64, 0.25) 0%,
-    rgba(7, 17, 32, 0.7) 55%,
-    rgba(7, 17, 32, 0.92) 100%
+    rgba(15, 37, 64, 0.12) 0%,
+    rgba(7, 17, 32, 0.42) 46%,
+    rgba(7, 17, 32, 0.82) 76%,
+    rgba(7, 17, 32, 0.95) 100%
   );
 }
 .team-card--springbreakers .team-photo::after {
   background: linear-gradient(
     180deg,
-    rgba(15, 48, 32, 0.25) 0%,
-    rgba(7, 26, 16, 0.7) 55%,
-    rgba(7, 26, 16, 0.92) 100%
+    rgba(15, 48, 32, 0.12) 0%,
+    rgba(7, 26, 16, 0.42) 46%,
+    rgba(7, 26, 16, 0.82) 76%,
+    rgba(7, 26, 16, 0.95) 100%
   );
 }
 .team-wave {
@@ -486,9 +491,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-size: clamp(22px, 3vw, 30px);
   font-weight: 700;
   color: var(--text-primary);
+  margin-top: auto;
   margin-bottom: 6px;
   position: relative;
   z-index: 1;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
 }
 .team-card--breakers .team-name { color: #a8c8f0; }
 .team-card--springbreakers .team-name { color: #90d4a8; }
@@ -498,6 +505,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-style: italic;
   position: relative;
   z-index: 1;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 .team-roster {
   padding: 8px 32px 32px;
